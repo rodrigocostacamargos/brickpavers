@@ -2,3 +2,7 @@ node_modules/
 .DS_Store
 dist/
 .env
+
+# raw uploads (contain unreviewed/personal files) — only curated copies go in images/ and videos/
+fotos_videos/
+*:Zone.Identifier

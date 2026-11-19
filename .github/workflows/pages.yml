@@ -28,6 +28,7 @@ jobs:
           cp index.html styles.css script.js favicon.svg robots.txt sitemap.xml _site/
           [ -f CNAME ] && cp CNAME _site/ || true
           cp -r images _site/images
+          cp -r videos _site/videos
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
