@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rodrigocostacamargos.github.io/brickpavers/sitemap.xml
+Sitemap: https://brickpaverscfl.com/sitemap.xml
