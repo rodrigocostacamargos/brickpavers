@@ -25,7 +25,8 @@ jobs:
       - name: Select site files
         run: |
           mkdir _site
-          cp index.html styles.css script.js favicon.svg robots.txt _site/
+          cp index.html styles.css script.js favicon.svg robots.txt sitemap.xml _site/
+          [ -f CNAME ] && cp CNAME _site/ || true
           cp -r images _site/images
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

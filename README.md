@@ -14,10 +14,14 @@ Plain HTML/CSS/JS, no build step. Open `index.html` to preview.
 2. Push to `main` (or run the workflow manually in the **Actions** tab).
 3. The site goes live at `https://rodrigocostacamargos.github.io/brickpavers/`.
 
-## Custom domain (e.g. brickpavers.com)
-1. Buy the domain (Cloudflare Registrar, Namecheap, ...).
-2. Repo → Settings → Pages → **Custom domain** → enter it, then enable *Enforce HTTPS*.
-3. At the registrar, add DNS records: `A` records for the apex to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, and a `CNAME` for `www` → `rodrigocostacamargos.github.io`.
+## Custom domain (recommended: brickpaverscfl.com)
+1. Buy the domain (Cloudflare Registrar recommended), in the company's name.
+2. Run `scripts/set-domain.sh brickpaverscfl.com`, commit and push (writes `CNAME`, updates canonical/OG/sitemap URLs).
+3. At the DNS provider add:
+   - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `CNAME` for `www` → `rodrigocostacamargos.github.io`
+   (On Cloudflare, set these records to **DNS only**, not proxied, until HTTPS is issued.)
+4. Repo → Settings → Pages → **Custom domain** → enter the domain, wait for the DNS check, then enable **Enforce HTTPS**.
 
 (Alternative: Cloudflare Pages or Netlify, connected to this repo — no build command, output directory `/`.)
 
