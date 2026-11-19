@@ -17,6 +17,18 @@ const T = {
     hero_title: "Brick Pavers done right: repair, sealing & pool decks.",
     hero_lead: "We bring driveways, patios and pool decks back to life. Free quotes, and we speak English, Português and Español.",
     cta_call: "Call now", cta_quote: "Get a free quote",
+    nav_quote: "Free quote",
+    hero_t1: "Brick Pavers done right:",
+    hero_t2: "repair, sealing & pool decks.",
+    aria_prev: "Previous photo",
+    aria_next: "Next photo",
+    aria_layers: "Cross-section of a paver installation",
+    layer1: "Interlocking pavers",
+    layer2: "Bedding sand",
+    layer3: "Compacted rock base",
+    layer4: "Compacted soil",
+    base_title: "Built on a solid base",
+    base_p: "A paver surface is only as good as what is underneath it: compacted soil, a compacted rock base, a thin layer of bedding sand, then interlocking pavers held in place by edge restraint. That is how driveways and pool decks stay level for years.",
     services_title: "Our services",
     s1_t: "Paver repair", s1_d: "Sunken, shifted or stained pavers? We level, re-lay and restore them.",
     s2_t: "Sealing", s2_d: "Protect your pavers from sun, rain and stains and bring back the color.",
@@ -65,6 +77,18 @@ const T = {
     hero_title: "Brick Pavers bem feitos: reparo, selagem e pool decks.",
     hero_lead: "Devolvemos a vida a driveways, patios e pool decks. Orçamento grátis, e falamos Português, English e Español.",
     cta_call: "Ligar agora", cta_quote: "Orçamento grátis",
+    nav_quote: "Orçamento grátis",
+    hero_t1: "Brick Pavers bem feitos:",
+    hero_t2: "reparo, selagem e pool decks.",
+    aria_prev: "Foto anterior",
+    aria_next: "Próxima foto",
+    aria_layers: "Corte transversal de uma instalação de pavers",
+    layer1: "Pavers intertravados",
+    layer2: "Areia de assentamento",
+    layer3: "Base de pedra compactada",
+    layer4: "Solo compactado",
+    base_title: "Feito sobre uma base sólida",
+    base_p: "Um piso de pavers é tão bom quanto o que fica embaixo dele: solo compactado, base de pedra compactada, uma camada fina de areia de assentamento e os pavers intertravados, presos por uma contenção de borda. É assim que driveways e pool decks se mantêm nivelados por muitos anos.",
     services_title: "Nossos serviços",
     s1_t: "Reparo de pavers", s1_d: "Pavers afundados, desnivelados ou manchados? Nós nivelamos, reassentamos e restauramos.",
     s2_t: "Selagem", s2_d: "Proteja seus pavers do sol, da chuva e de manchas e devolva a cor.",
@@ -113,6 +137,18 @@ const T = {
     hero_title: "Brick Pavers bien hechos: reparación, sellado y pool decks.",
     hero_lead: "Le devolvemos la vida a driveways, patios y pool decks. Cotización gratis, y hablamos Español, English y Português.",
     cta_call: "Llamar ahora", cta_quote: "Cotización gratis",
+    nav_quote: "Cotización gratis",
+    hero_t1: "Brick Pavers bien hechos:",
+    hero_t2: "reparación, sellado y pool decks.",
+    aria_prev: "Foto anterior",
+    aria_next: "Foto siguiente",
+    aria_layers: "Corte transversal de una instalación de pavers",
+    layer1: "Pavers entrelazados",
+    layer2: "Arena de asiento",
+    layer3: "Base de piedra compactada",
+    layer4: "Suelo compactado",
+    base_title: "Construido sobre una base sólida",
+    base_p: "Un piso de pavers es tan bueno como lo que hay debajo: suelo compactado, base de piedra compactada, una capa fina de arena de asiento y pavers entrelazados sujetos por una contención de borde. Así los driveways y pool decks se mantienen nivelados por muchos años.",
     services_title: "Nuestros servicios",
     s1_t: "Reparación de pavers", s1_d: "¿Pavers hundidos, desnivelados o manchados? Los nivelamos, reinstalamos y restauramos.",
     s2_t: "Sellado", s2_d: "Proteja sus pavers del sol, la lluvia y las manchas y recupere el color.",
@@ -176,8 +212,9 @@ function apply() {
   document.querySelectorAll(".person").forEach(p =>
     p.classList.toggle("active", p.dataset.langFor === lang));
   // Main call buttons follow the language
-  ["heroCall", "floatCall"].forEach(id => document.getElementById(id).href = "tel:+1" + c.phone);
-  document.querySelector(".heroPhone").textContent = c.pretty;
+  document.querySelectorAll(".js-call").forEach(a => { a.href = "tel:+1" + c.phone; });
+  document.querySelectorAll(".js-phone").forEach(el => { el.textContent = c.pretty; });
+  document.querySelectorAll("[data-i18n-aria]").forEach(el => el.setAttribute("aria-label", t[el.dataset.i18nAria]));
 }
 
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => {
@@ -208,5 +245,19 @@ document.getElementById("galleryGrid").addEventListener("click", e => {
 });
 lb.addEventListener("click", () => { lb.hidden = true; });
 document.addEventListener("keydown", e => { if (e.key === "Escape") lb.hidden = true; });
+
+// Hero carousel (autoplay pauses on hover/focus; off for reduced motion)
+(function () {
+  const box = document.getElementById("carousel"); if (!box) return;
+  const slides = [...box.querySelectorAll(".slide")]; let i = 0, timer = null;
+  const show = n => { slides[i].classList.remove("active"); i = (n + slides.length) % slides.length; slides[i].classList.add("active"); };
+  box.querySelector(".next").addEventListener("click", () => show(i + 1));
+  box.querySelector(".prev").addEventListener("click", () => show(i - 1));
+  const play = () => { if (matchMedia("(prefers-reduced-motion: reduce)").matches) return; stop(); timer = setInterval(() => show(i + 1), 5000); };
+  const stop = () => { if (timer) clearInterval(timer); timer = null; };
+  ["mouseenter", "focusin"].forEach(e => box.addEventListener(e, stop));
+  ["mouseleave", "focusout"].forEach(e => box.addEventListener(e, play));
+  play();
+})();
 
 apply();
