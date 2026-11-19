@@ -22,7 +22,16 @@
     "@type": "HomeAndConstructionBusiness",
     "name": "Brickpavers - CFA Business LLC",
     "description": "Brick paver repair, sealing, pool decks, driveways and pressure washing.",
-    "areaServed": "Central Florida",
+    "areaServed": [
+      {"@type": "City", "name": "Orlando"},
+      {"@type": "City", "name": "Kissimmee"},
+      {"@type": "City", "name": "Winter Garden"}
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00", "closes": "18:00"
+    }],
     "telephone": ["+1-407-994-8574", "+1-321-314-7384", "+1-321-240-4024"],
     "knowsLanguage": ["en", "pt", "es"]
   }
@@ -49,6 +58,7 @@
     <nav class="nav" aria-label="Main">
       <a href="#services" data-i18n="nav_services">Services</a>
       <a href="#gallery" data-i18n="nav_gallery">Our Work</a>
+      <a href="#area" data-i18n="nav_area">Service area</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
@@ -135,6 +145,18 @@
         </ul>
       </div>
       <img src="images/base-preparation.jpg" alt="" loading="lazy" class="why-img">
+    </div>
+  </section>
+
+  <section id="area" class="section alt">
+    <div class="wrap">
+      <h2 data-i18n="area_title">Service area</h2>
+      <p class="sub" data-i18n="area_sub">We serve Central Florida, including:</p>
+      <ul class="chips">
+        <li>Orlando</li><li>Kissimmee</li><li>Winter Garden</li>
+      </ul>
+      <p class="area-note"><span data-i18n="area_note">And nearby areas. Ask us if you're not sure.</span></p>
+      <p class="hours"><strong data-i18n="hours_label">Hours</strong> · <span data-i18n="hours_val">Mon–Sat, 8 AM – 6 PM</span></p>
     </div>
   </section>
 

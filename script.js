@@ -7,6 +7,10 @@ const CONTACTS = {
 
 const T = {
   en: {
+    nav_area: "Service area",
+    area_title: "Service area", area_sub: "We serve Central Florida, including:",
+    area_note: "And nearby areas. Ask us if you're not sure.",
+    hours_label: "Hours", hours_val: "Mon–Sat, 8 AM – 6 PM",
     title: "Brickpavers | Paver Repair, Sealing & Pool Decks in Central Florida",
     nav_services: "Services", nav_gallery: "Our Work", nav_contact: "Contact",
     hero_eyebrow: "CFA Business LLC · Central Florida",
@@ -37,6 +41,10 @@ const T = {
     footer_tag: "Repair · Sealing · Pool Decks · Driveway · Pressure Washing",
   },
   pt: {
+    nav_area: "Área atendida",
+    area_title: "Área atendida", area_sub: "Atendemos a Flórida Central, incluindo:",
+    area_note: "E regiões próximas. Pergunte se tiver dúvida.",
+    hours_label: "Horário", hours_val: "Seg–Sáb, 8h às 18h",
     title: "Brickpavers | Reparo, Selagem e Pool Decks de Pavers na Flórida Central",
     nav_services: "Serviços", nav_gallery: "Nossos Trabalhos", nav_contact: "Contato",
     hero_eyebrow: "CFA Business LLC · Flórida Central",
@@ -67,6 +75,10 @@ const T = {
     footer_tag: "Reparo · Selagem · Pool Decks · Driveway · Lavagem de Alta Pressão",
   },
   es: {
+    nav_area: "Área de servicio",
+    area_title: "Área de servicio", area_sub: "Servimos Florida Central, incluyendo:",
+    area_note: "Y zonas cercanas. Pregúntenos si tiene dudas.",
+    hours_label: "Horario", hours_val: "Lun–Sáb, 8 AM – 6 PM",
     title: "Brickpavers | Reparación, Sellado y Pool Decks de Pavers en Florida Central",
     nav_services: "Servicios", nav_gallery: "Nuestros Trabajos", nav_contact: "Contacto",
     hero_eyebrow: "CFA Business LLC · Florida Central",
