@@ -136,3 +136,19 @@ h2::after{content:"";display:block;width:56px;height:4px;background:var(--red);m
 .layer.l4{height:78px;background:linear-gradient(#6b4a2b,#4f3520)}
 .layer span{background:rgba(0,0,0,.38);padding:3px 10px;border-radius:6px}
 .layer.l2 span{background:rgba(255,255,255,.45)}
+
+/* ---- original dark scheme for header + hero (graphite, red line, orange accents) */
+.topbar{background:var(--ink);color:#fff;border-bottom:3px solid var(--red)}
+.brand{color:#fff}
+.nav a{color:#ddd}
+.nav a:hover{color:#fff;border-bottom-color:var(--red)}
+.lang button{color:#ddd;border-color:#555}
+.lang button[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.topbar .btn-outline,.hero .btn-outline{color:#fff;border-color:#fff}
+.topbar .btn-outline:hover,.hero .btn-outline:hover{background:#fff;color:var(--ink)}
+.hero{background:linear-gradient(160deg,var(--ink) 0%,#24262a 60%,#3a1214 100%);color:#fff}
+.hero h1{color:#fff}
+.hero .accent{color:var(--orange)}
+.hero .eyebrow{color:#ffa45c}
+.hero .lead{color:#dcdcdc}
+.carousel{border-color:rgba(255,255,255,.14)}
