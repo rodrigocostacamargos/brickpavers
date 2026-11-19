@@ -23,6 +23,9 @@ Plain HTML/CSS/JS, no build step, no dependencies. Open `index.html` to preview.
 The site language switch (EN/PT/ES) also changes the main call button and the WhatsApp target to that language's contact.
 Default language comes from the browser (`navigator.language`), saved in `localStorage`.
 
+## Services listed on the site
+Repair, sealing, pool decks, driveways, pressure washing (from the business card) + patios & fire pits, retaining walls & borders, artificial turf (added from the photos, approved by the owner). Pergolas appear in photos only as patio backdrops — do not claim pergola building.
+
 ## Decisions / rules (follow these)
 - **Do NOT mention license or insurance** anywhere (site, Google profile). The owner decided not to.
 - **Do not invent claims** (years of experience, warranty, reviews, prices). Only use facts the owner gave.
