@@ -52,6 +52,7 @@ const T = {
     wa_hello: "Hello! I'd like a free quote.",
     wa_name: "Name", wa_service: "Service", wa_city: "City/ZIP",
     footer_tag: "Repair · Sealing · Pool Decks · Driveway · Pressure Washing",
+    footer_aka: "Also known as Brick on Brick",
   },
   pt: {
     nav_area: "Área atendida",
@@ -99,6 +100,7 @@ const T = {
     wa_hello: "Olá! Gostaria de um orçamento grátis.",
     wa_name: "Nome", wa_service: "Serviço", wa_city: "Cidade/ZIP",
     footer_tag: "Reparo · Selagem · Pool Decks · Driveway · Lavagem de Alta Pressão",
+    footer_aka: "Também conhecida como Brick on Brick",
   },
   es: {
     nav_area: "Área de servicio",
@@ -146,6 +148,7 @@ const T = {
     wa_hello: "¡Hola! Quisiera una cotización gratis.",
     wa_name: "Nombre", wa_service: "Servicio", wa_city: "Ciudad/ZIP",
     footer_tag: "Reparación · Sellado · Pool Decks · Driveway · Lavado a Presión",
+    footer_aka: "También conocida como Brick on Brick",
   },
 };
 

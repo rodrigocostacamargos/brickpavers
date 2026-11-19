@@ -23,6 +23,9 @@ Plain HTML/CSS/JS, no build step, no dependencies. Open `index.html` to preview.
 The site language switch (EN/PT/ES) also changes the main call button and the WhatsApp target to that language's contact.
 Default language comes from the browser (`navigator.language`), saved in `localStorage`.
 
+## Naming
+Primary brand: **Brickpavers** (business card, domain, Google profile name). The company is also known as **Brick on Brick** — mention it only as "also known as" (footer, JSON-LD `alternateName`, Google profile *description*, social bios). Never put both names in the Google profile name field. Legal entity: CFA Business LLC (a Florida fictitious-name registration for the trade names should be checked on Sunbiz).
+
 ## Services listed on the site
 Repair, sealing, pool decks, driveways, pressure washing (from the business card) + patios & fire pits, retaining walls & borders, artificial turf (added from the photos, approved by the owner). Pergolas appear in photos only as patio backdrops — do not claim pergola building.
 
